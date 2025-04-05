@@ -8,7 +8,7 @@ bool Year(int Y){
     if(Y % 400 == 0 ){
         return 1;
     }
-    else if(Y % 100 == 0 && Y % 4 != 0) return 0;
+    else if(Y % 100 == 0 || Y % 4 != 0) return 0;
     else return 1;
 }
 
