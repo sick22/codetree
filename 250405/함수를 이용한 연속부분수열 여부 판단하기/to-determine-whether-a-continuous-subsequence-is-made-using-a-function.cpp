@@ -8,13 +8,16 @@ int a[100], b[100];
 string Part(int a[], int b[]){
     int i = 0, check = 0;
     bool c = false;
-    while(1){
+    while(i<n1){
         if(a[i] == b[0]){
+            c = true;
             break;
         }
         i++;
     }
     int n = 0;
+    if(c){
+
     for(int j = 0;j<n2; j++){
         if(a[i]==b[n]){
             c = true;
@@ -26,6 +29,7 @@ string Part(int a[], int b[]){
         }
         n++;
         i++;
+    }
     }
 
     if(c && check == 0) return "Yes";
