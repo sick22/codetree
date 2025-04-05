@@ -15,7 +15,7 @@ string Part(int a[], int b[]){
         i++;
     }
     int n = 0;
-    for(;i<=n2; i++){
+    for(int j = 0;j<n2; j++){
         if(a[i]==b[n]){
             c = true;
 
@@ -25,6 +25,7 @@ string Part(int a[], int b[]){
             check++;
         }
         n++;
+        i++;
     }
 
     if(c && check == 0) return "Yes";
