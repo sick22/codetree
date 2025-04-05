@@ -3,7 +3,7 @@
 using namespace std;
 
 int Y, M, D;
-int Day[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
+int Day[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
 bool Year(int Y){
     if(Y % 400 == 0 ){
         return 1;
@@ -13,11 +13,9 @@ bool Year(int Y){
 }
 
 string Season(int Y, int M, int D){
-    M--;
-    if(M == 1 && Year(Y)) Day[1] = 29;
+    if(M == 2 && Year(Y)) Day[2] = 29;
     if(Day[M] < D) return "-1";
     else{
-        M++;
         if(M >= 3 && M <=5) return "Spring";
         else if(M >= 6 && M <= 8) return "Summer";
         else if(M >= 9 && M <= 11) return "Fall";
