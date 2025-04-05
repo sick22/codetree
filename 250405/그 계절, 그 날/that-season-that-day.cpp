@@ -14,9 +14,10 @@ bool Year(int Y){
 
 string Season(int Y, int M, int D){
     M--;
-    if(Year(Y)) Day[1] = 29;
+    if(M == 1 && Year(Y)) Day[1] = 29;
     if(Day[M] < D) return "-1";
     else{
+        M++;
         if(M >= 3 && M <=5) return "Spring";
         else if(M >= 6 && M <= 8) return "Summer";
         else if(M >= 9 && M <= 11) return "Fall";
