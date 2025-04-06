@@ -27,7 +27,7 @@ int main() {
         if(command == 'L' && it != l.begin()){
             it--;
         }
-        if(command == 'R'){
+        if(command == 'R' && it != l.end()){
             it++;
         }
         if(command == 'D' && it != l.end() ){
